@@ -25,7 +25,7 @@ body, html {
 
 
 .menu {
-    background-color: #fffbe9b7;
+    background-color: #fffbe9e3;
     color:#A97300;
     position: absolute;
     top: 50%;
@@ -38,6 +38,8 @@ body, html {
     border-radius: 10px;
     z-index: 1;
   }
+  
+
 
 
   /* From Uiverse.io by Navarog21 */ 
