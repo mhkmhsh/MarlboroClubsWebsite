@@ -1,0 +1,105 @@
+[
+    {
+      "name": "Sarah Leonard",
+      "email": "johndoe@example.com",
+      "age": 30,
+      "role": "Developer"
+    },
+    {
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "age": 25,
+      "role": "Designer"
+    },
+    {
+      "name": "Michael Johnson",
+      "email": "michaeljohnson@example.com",
+      "age": 28,
+      "role": "Project Manager"
+    },
+    {
+      "name": "Emily Davis",
+      "email": "emilydavis@example.com",
+      "age": 35,
+      "role": "Product Manager"
+    },
+    {
+      "name": "David Lee",
+      "email": "davidlee@example.com",
+      "age": 40,
+      "role": "Team Lead"
+    },
+    {
+      "name": "Olivia Brown",
+      "email": "oliviabrown@example.com",
+      "age": 22,
+      "role": "Intern"
+    },
+    {
+      "name": "William Wilson",
+      "email": "williamwilson@example.com",
+      "age": 26,
+      "role": "Developer"
+    },
+    {
+      "name": "Sophia Martinez",
+      "email": "sophiamartinez@example.com",
+      "age": 31,
+      "role": "Designer"
+    },
+    {
+      "name": "James Garcia",
+      "email": "jamesgarcia@example.com",
+      "age": 29,
+      "role": "Marketing"
+    },
+    {
+      "name": "Ava Thomas",
+      "email": "avathomas@example.com",
+      "age": 32,
+      "role": "HR Manager"
+    },
+    {
+      "name": "Ethan Harris",
+      "email": "ethanharris@example.com",
+      "age": 34,
+      "role": "Sales Executive"
+    },
+    {
+      "name": "Isabella Clark",
+      "email": "isabellaclark@example.com",
+      "age": 24,
+      "role": "Content Writer"
+    },
+    {
+      "name": "Mason Walker",
+      "email": "masonwalker@example.com",
+      "age": 38,
+      "role": "Software Engineer"
+    },
+    {
+      "name": "Lucas Hall",
+      "email": "lucashall@example.com",
+      "age": 27,
+      "role": "Quality Assurance"
+    },
+    {
+      "name": "Charlotte Allen",
+      "email": "charlotteallen@example.com",
+      "age": 33,
+      "role": "Operations Manager"
+    },
+    {
+      "name": "Benjamin Young",
+      "email": "benjaminyoung@example.com",
+      "age": 23,
+      "role": "Business Analyst"
+    },
+    {
+      "name": "Mia King",
+      "email": "miaking@example.com",
+      "age": 26,
+      "role": "Customer Support"
+    }
+  ]
+  
