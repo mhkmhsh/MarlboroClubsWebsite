@@ -10,79 +10,94 @@
       "role": "Web 2, Web3 ,& Advisory Board Teacher"
     },
     {
+        "name": "Mahek Mahesh",
+        "email": "525MMahesh@frhsd.com",
+        "role": "Advisory Board Teacher",
+        "grade":"12"
+      },
+    {
       "name": "Bailey Adler",
-      "email": "526badler@frhsd.com",
-      "role": "Advisory Board Student"
+      "email": "526BAdler@frhsd.com",
+      "role": "Advisory Board Student",
+      "grade":"11"
     },
     {
         "name": "Ayaan Awais",
-        "email": "525aawais@frhsd.com",
-        "role": "Advisory Board Student"
+        "email": "525AAwais@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"12"
       },
       {
         "name": "Kenz Elsherbini",
-        "email": "526kelsherbini@frhsd.com",
-        "role": "Advisory Board Student"
+        "email": "526KElsherbini@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"11"
       },
       {
         "name": "Alexa Gold",
-        "email": "526agold@frhsd.com",
-        "role": "Advisory Board Student"
+        "email": "526AGold@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"11"
       },
       {
         "name": "Sophia Hornik",
-        "email": "525shornik@frhsd.com",
-        "role": "Advisory Board Student"
+        "email": "525SHornik@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"12"
       },
       {
         "name": "Saanvi Jaswal",
-        "email": "525sjaswal@frhsd.com",
-        "role": "Advisory Board Student"
+        "email": "525SJaswal@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"12"
       },
       {
         "name": "Emma Kozlovsky",
-        "email": "525ekozlovsky@frhsd.com",
-        "role": "Advisory Board Student"
+        "email": "525EKozlovsky@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"12"
       },
       {
         "name": "Christopher Loiacono",
-        "email": "526cloiacono@frhsd.com",
-        "role": "Advisory Board Student"
-      },
-      {
-        "name": "Bailey Adler",
-        "email": "526badler@frhsd.com",
-        "role": "Advisory Board Student"
+        "email": "526CLoiacono@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"11"
       },
       {
         "name": "Hardav Pandya",
-        "email": "525hpandya@frhsd.com",
-        "role": "Advisory Board Student"
+        "email": "525HPandya@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"12"
       },
       {
         "name": "Ayat Sakalla",
-        "email": "525asakalla@frhsd.com",
-        "role": "Advisory Board Student"
-      },
-      {
-        "name": "Bailey Adler",
-        "email": "526badler@frhsd.com",
-        "role": "Advisory Board Student"
+        "email": "525ASakalla@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"12"
       },
       {
         "name": "Alyson Schwartz",
-        "email": "526a@frhsd.com",
-        "role": "Advisory Board Student"
+        "email": "526ASchwartz@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"11"
       },
       {
-        "name": "Bailey Adler",
-        "email": "526badler@frhsd.com",
-        "role": "Advisory Board Student"
+        "name": "Kristen Tsim",
+        "email": "526KTsim@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"11"
       },
       {
-        "name": "Bailey Adler",
-        "email": "526badler@frhsd.com",
-        "role": "Advisory Board Student"
+        "name": "Avery Weksler-Hart",
+        "email": "525AHart@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"12"
+      },
+      {
+        "name": "Koustubha Kolla",
+        "email": "525KKolla@frhsd.com",
+        "role": "Advisory Board Student",
+        "grade":"12"
       }
   ]
   
