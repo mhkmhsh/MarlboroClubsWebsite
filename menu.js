@@ -55,6 +55,10 @@ function test() {
     target.parent().addClass('active');
   });
 
+  $(window).scroll(function() {
+    var scrollTop = $(window).scrollTop();
+    $(".menu").css("transform", "translate(-50%, calc(-50% + " + scrollTop / 3 + "px))");
+});
 
   
   

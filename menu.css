@@ -1,19 +1,45 @@
-/*body styling */
+/* Body styling */
 body {
-    background-color: #FFFBE9;
+    background-color: #0C0726;
     font-family: 'Roboto', sans-serif;
 }
 
-
+/* Video Background */
 .video-background {
-  
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: flex;
+
+    width: 100vw;
+    height: 100vh; 
     object-fit: cover;
-  
     filter: blur(5px);
+    z-index: -5; /* Ensures video is behind everything else */
+}
+
+
+.schedule {
+    background-color: #6F4E37;
+  
+    width: 100%; 
+    position: absolute; 
+    top: 75vh; 
+    left: 0;
+}
+
+
+/* Menu Box */
+.menu {
+    background-color: rgba(255, 251, 233, 0.6);
+    color: #0C0726;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30%;
+    text-align: center;
+    font-size: 2em ;
+    font-family: "Abril Fatface", serif;
+    padding: 20px;
+    z-index: 1;
 }
 
 i {
