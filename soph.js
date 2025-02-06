@@ -55,6 +55,28 @@ function test() {
     target.parent().addClass('active');
   });
 
+  //hero section
+  const carousel = document.querySelector('#carouselExample');
+  const captions = [
+      'Lorem ipsum odor amet, consectetuer adipiscing elit. Tellus mauris faucibus varius dictumst neque augue mus? Volutpat mattis nam vehicula adipiscing cursus conubia maximus varius ac',
+      'Lorem ipsum odor amet, consectetuer adipiscing elit. Tellus mauris faucibus varius dictumst neque augue mus? Volutpat mattis nam vehicula adipiscing cursus conubia maximus varius ac',
+      'Lorem ipsum odor amet, consectetuer adipiscing elit. Tellus mauris faucibus varius dictumst neque augue mus? Volutpat mattis nam vehicula adipiscing cursus conubia maximus varius ac'
+  ];
+  
+  carousel.addEventListener('slide.bs.carousel', function (event) {
+      const index = event.to;
+      const caption = document.querySelectorAll('.carousel-caption')[index];
+  
+      // Fade out all captions
+      document.querySelectorAll('.carousel-caption').forEach((caption) => {
+          caption.style.opacity = 0;
+      });
+  
+      
+      setTimeout(() => {
+          caption.style.opacity = 1;
+      }, 300); 
+  });
 
   
   
