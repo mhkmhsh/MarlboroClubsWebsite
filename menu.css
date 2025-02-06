@@ -2,48 +2,74 @@
 body {
     background-color: #0C0726;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-/* Video Background */
-.video-background {
-    position: flex;
 
-    width: 100vw;
-    height: 100vh; 
+.video-background {
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     filter: blur(5px);
-    z-index: -5; /* Ensures video is behind everything else */
+    z-index: -1;  
 }
-
-
-.schedule {
-    background-color: #6F4E37;
-  
-    width: 100%; 
-    position: absolute; 
-    top: 75vh; 
-    left: 0;
-}
-
 
 /* Menu Box */
 .menu {
     background-color: rgba(255, 251, 233, 0.6);
     color: #0C0726;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 30%;
     text-align: center;
-    font-size: 2em ;
+    font-size: 2em;
     font-family: "Abril Fatface", serif;
     padding: 20px;
-    z-index: 1;
+    z-index: -1;
 }
 
-i {
-    margin-right: 10px;
+/* Schedule Box */
+.schedule {
+    background-color: #FFFBE9;
+    width: 100%; 
+    padding: 5vh 0;
+    color: #0C0726;
+    text-align: center;
+    font-size: 2.5em;
+    z-index: 2;
+    position: relative;
+}
+
+/* Image Gallery */
+.imggal {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    margin: 50px 0;
+}
+
+/* Second Text */
+.text {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(153, 99, 60, 0.719);
+    color: #FFFBE9;
+    font-size: 1.5em;
+}
+
+/* Sites Gallery */
+.sitesrotating {
+    background: #0C0726;
+    color: #FFFBE9;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 /* Navbar styles */

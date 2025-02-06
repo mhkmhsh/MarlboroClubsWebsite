@@ -196,3 +196,22 @@ i {
         left: -25px;
     }
 }
+/* hero page */
+.carousel-inner {
+    position: relative;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
