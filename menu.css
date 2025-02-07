@@ -7,6 +7,25 @@ body {
     overflow-x: hidden;
 }
 
+/*scrollbar styling */
+::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #769EB0; 
+      
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5b3e2e;
+  }
+
+
 
   
   .carousel-container {
@@ -53,7 +72,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 30%;
+    border-radius: 5px 20px;
     text-align: center;
     font-size: 2em;
     font-family: "Abril Fatface", serif;
@@ -92,7 +111,7 @@ body {
 
 /* Sites Gallery */
 .sitesrotating {
-    background: #0C0726;
+    background: #0c0726b2;
     color: #FFFBE9;
     padding: 50px 20px;
     text-align: center;
@@ -289,7 +308,7 @@ body {
     justify-content: center;
     border-radius: 8px;
     backdrop-filter: blur(30px);
-    background: #082931;
+    background: #fadca8;
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -298,30 +317,30 @@ body {
     height: 150px;
     border-radius: 50%;
     margin-bottom: 40px;
-    border: 3px solid #fadca8;
+    border: 3px solid #0C0726;
     padding: 4px;
 }
 
 .card-list .card-item .user-profession {
-    color: #fadca8;
+    color: #0C0726;
     font-weight: 500;
     margin: 14px 0 40px;
 }
 
 .card-list .card-item .message-button {
-    color: #fadca8;
+    color: #0C0726;
     font-weight: 500;
 }
 
 /* Swiper Pagination for Carousel */
 .slider-wrapper .swiper-pagination-bullet {
-    background: #d9924e;
+    background: #6F4E37;
     height: 15px;
     width: 15px;
 }
 
 .slider-wrapper .swiper-slide-button {
-    color: #d9924e;
+    color: #6F4E37;
     margin-top: -50px;
 }
 

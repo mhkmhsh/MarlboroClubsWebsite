@@ -135,8 +135,9 @@ function animate(n) {
 
 // Start animation with the first image
 animate(0);
-// CAR SWIPER STUFF FROM THEIR JS FILE
-const swiper = new Swiper('.slider-wrapper', {
+ // CAR SWIPER STUFF FROM THEIR JS FILE
+ const swiper = new Swiper('.slider-wrapper', {
+  
   loop: true,
   grabCursor: true,
   spaceBetween: 30,
@@ -154,17 +155,19 @@ const swiper = new Swiper('.slider-wrapper', {
     prevEl: '.swiper-button-prev',
   },
 
-  // Responsive breakpoints
-  breakpoints: {
+  //responsive breakpoints
+  breakpoints:{
     0: {
-      slidesPerView: 1
-    },
-    620: {
-      slidesPerView: 2
-    },
-    1024: {
-      slidesPerView: 3
-    }
+    slidesPerView:1
+  },
+
+  620: {
+    slidesPerView:2
+  },
+  1024: {
+    slidesPerView:3
+  },
   }
+
 });
 
