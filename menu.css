@@ -276,3 +276,66 @@ body {
         left: -25px;
     }
 }
+
+/* rotating carousel*/
+.card-list .card-item {
+    color:#fadca8;
+    width: 400px;
+    padding:35px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter:blur(30px);
+    background:#082931;
+    border: 1px solid rgbs( 255, 255, 255, 0.5);
+  }
+  
+  .card-list .card-item .user-image {
+  
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom:40px;
+    border: 3px solid #fadca8;
+    padding: 4px;
+  }
+  
+  .card-list .card-item .user-profession {
+    color:#fadca8;
+    font-weight:500;
+    margin: 14px 0 40px;
+  }
+  
+  .card-list .card-item .message-button {
+    color:#fadca8;
+    font-weight: 500;
+  
+  }
+  
+  
+  .slider-wrapper .swiper-pagination-bullet {
+    background:#d9924e;
+    height: 15px;
+    width: 15px;
+  }
+  
+  
+  
+  .slider-wrapper .swiper-slide-button {
+    color:#d9924e;
+    margin-top: -50px;
+  }
+  
+  .slider-wrapper .swiper-slide-button:hover {
+    color:#d9924e;
+  }
+  
+  .inst{
+    background-color: #082931;
+    color:#fadca8;
+  }
+  #desc{
+    border-radius: 5px 5px 5px 5px;
+  }

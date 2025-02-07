@@ -14,12 +14,12 @@
 </head>
 
 <body> <!-- Navbar -->
-  <nav class="navbar navbar-expand-custom navbar-mainbg"> 
+  <nav class="navbar navbar-expand-custom navbar-mainbg">
     <a class="navbar-brand navbar-logo">C&C</a>
     <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation"> 
-      <img src="img/logo.png" alt="Logo" style="width: 50px; height: auto;"> 
-      <i class="fas fa-bars text-white"></i> 
+      aria-label="Toggle navigation">
+      <img src="img/logo.png" alt="Logo" style="width: 50px; height: auto;">
+      <i class="fas fa-bars text-white"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
@@ -35,20 +35,20 @@
         <li class="nav-item"> <a class="nav-link" href="par.html"> PARENTS PAGE </a> </li>
       </ul>
     </div>
-  </nav> 
-  
+  </nav>
+
   <!-- Video Background -->
-  <div class="video-container"> 
+  <div class="video-container">
     <video class="video-background" autoplay muted loop>
-        <source src="menu.mp4" type="video/mp4" /> Your browser does not support the video tag.
-    </video> 
+      <source src="menu.mp4" type="video/mp4" /> Your browser does not support the video tag.
+    </video>
   </div>
 
   <!-- Menu Intro Box -->
   <div class="menu">
     <h1> Coffee & Coding </h1>
   </div>
-  
+
   <!-- Schedule Box -->
   <div class="schedule">
     <h1> SCHEDULE HERE</h1>
@@ -57,26 +57,89 @@
   <!-- Image Gallery ( empty space)-->
   <div class="imggal">
   </div>
-  
+
   <!-- Second Text -->
   <div class="text">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores odit nulla porro repellat repellendus ipsa illo quisquam modi quia doloremque facilis architecto assumenda, tenetur mollitia sit est quos, quibusdam nostrum nemo repudiandae inventore tempore saepe vitae. Qui nisi non aliquid, maxime pariatur architecto quae perferendis placeat ut, inventore, recusandae veniam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores odit nulla porro repellat repellendus ipsa illo
+      quisquam modi quia doloremque facilis architecto assumenda, tenetur mollitia sit est quos, quibusdam nostrum nemo
+      repudiandae inventore tempore saepe vitae. Qui nisi non aliquid, maxime pariatur architecto quae perferendis
+      placeat ut, inventore, recusandae veniam!</p>
   </div>
-  
+
   <!-- Image Gallery-->
   <div class="imggal">
     <div class="carousel-container">
       <div class="carousel">
-    </div>
+      </div>
     </div>
   </div>
-  
+
   <!-- Sites Gallery -->
   <div class="sitesrotating">
-    <p>Sites Gallery Content</p>
+    <!-- ROTATING CAROUSEL-->
+    <!--https://www.youtube.com/watch?v=XxG7vqFecR8&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2&index=2-->
+    <div class="container swiper">
+      <div class="slider-wrapper">
+        <div class="card-list swiper-wrapper">
+          <div class="card-item swiper-slide">
+            <img src="img/..." alt="User Image" class="user-image">
+            <h2 class="user-profession"> Site</h2>
+
+
+            <a class=" message-button" role="button" href="...">...</a>
+          </div>
+          <div class="card-item swiper-slide">
+            <img src="img/..." alt="User Image" class="user-image">
+            <h2 class="user-profession"> Site</h2>
+
+
+            <a class=" message-button" role="button" href="...">...</a>
+          </div>
+          <div class="card-item swiper-slide">
+            <img src="img/..." alt="User Image" class="user-image">
+            <h2 class="user-profession"> Site</h2>
+
+
+            <a class=" message-button" role="button" href="...">...</a>
+            <div class="card-item swiper-slide">
+              <img src="img/..." alt="User Image" class="user-image">
+              <h2 class="user-profession"> Site</h2>
+
+
+              <a class=" message-button" role="button" href="...">...</a>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="img/..." alt="User Image" class="user-image">
+              <h2 class="user-profession"> Site</h2>
+
+
+              <a class=" message-button" role="button" href="...">...</a>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="img/..." alt="User Image" class="user-image">
+              <h2 class="user-profession"> Site</h2>
+
+
+              <a class=" message-button" role="button" href="...">...</a>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class=" swiper-slide-button swiper-button-prev"></div>
+          <div class=" swiper-slide-button swiper-button-next"></div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   <!-- Footer and Scripts -->
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.0.1/swiper-bundle.min.css">
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9.0.1/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="menu.js"></script>
