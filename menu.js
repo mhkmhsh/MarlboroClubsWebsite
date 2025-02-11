@@ -60,81 +60,7 @@ $(window).scroll(function () {
   $(".menu").css("transform", "translate(-50%, calc(-50% + " + scrollTop / 3 + "px))");
 });
 
-// Image carousel functionality
-var images = [{
-  src: 'IMG/PORTDAY.png',
-  alt: 'portfolio day',
-  animation: {
-    translateY: [-50, 0],
-    scale: [1.2, 1]
-  }
-}, {
-  src: 'img/SENNIGHT.png',
-  alt: 'senior night',
-  animation: {
-    translateX: [-50, 0],
-    scale: [1.2, 1]
-  }
-}, {
-  src: 'img/TRIP.png',
-  alt: 'field trip',
-  animation: {
-    translateX: [50, 0],
-    scale: [1.2, 1]
-  }
-}];
 
-function animate(n) {
-  var img;
-  var imageData = images[n];
-  var imgs = document.querySelectorAll('.carousel-img');
-
-  // Find if the image already exists in the carousel
-  if (imgs) {
-    img = [].slice.apply(imgs).filter(function (img) {
-      return img.src == imageData.src;
-    })[0];
-  }
-
-  // If image doesn't exist, create it
-  if (!img) {
-    img = document.createElement('img');
-    img.src = imageData.src;
-    img.alt = imageData.alt;
-    img.classList.add('carousel-img');  // Make sure it has the class
-  }
-
-  img.style.display = 'block';
-  img.style.opacity = 0; // Initial opacity for fade-in effect
-
-  document.querySelector('.carousel').appendChild(img); // Append the image to the carousel container
-
-  var next = true;
-
-  // Fade-in and animate the image
-  Velocity(img, {
-    opacity: [1, 0], // Fade effect
-  }, {
-    duration: 2000
-  });
-
-  // Handle the image's position and animation
-  Velocity(img, imageData.animation, {
-    queue: false,
-    duration: 7000,
-    progress: function (elements, complete) {
-      // Transition to the next image when animation completes
-      if (complete > 0.8 && next) {
-        var nextN = (n === images.length - 1) ? 0 : (n + 1);
-        animate(nextN);
-        next = false;
-      }
-    }
-  });
-}
-
-// Start animation with the first image
-animate(0);
  // CAR SWIPER STUFF FROM THEIR JS FILE
  const swiper = new Swiper('.slider-wrapper', {
   
@@ -171,3 +97,66 @@ animate(0);
 
 });
 
+
+//hero section
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let thumbnails = document.querySelectorAll('.thumbnail .item');
+
+// config param
+let countItem = items.length;
+let itemActive = 0;
+// event next click
+next.onclick = function(){
+    itemActive = itemActive + 1;
+    if(itemActive >= countItem){
+        itemActive = 0;
+    }
+    showSlider();
+}
+//event prev click
+prev.onclick = function(){
+    itemActive = itemActive - 1;
+    if(itemActive < 0){
+        itemActive = countItem - 1;
+    }
+    showSlider();
+}
+// auto run slider
+let refreshInterval = setInterval(() => {
+    next.click();
+}, 5000)
+function showSlider(){
+    // remove item active old
+    let itemActiveOld = document.querySelector('.slider .list .item.active');
+    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+    itemActiveOld.classList.remove('active');
+    thumbnailActiveOld.classList.remove('active');
+
+    // active new item
+    items[itemActive].classList.add('active');
+    thumbnails[itemActive].classList.add('active');
+    setPositionThumbnail();
+
+    // clear auto time run slider
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+        next.click();
+    }, 5000)
+}
+function setPositionThumbnail () {
+    let thumbnailActive = document.querySelector('.thumbnail .item.active');
+    let rect = thumbnailActive.getBoundingClientRect();
+    if (rect.left < 0 || rect.right > window.innerWidth) {
+        thumbnailActive.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+    }
+}
+
+// click thumbnail
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        itemActive = index;
+        showSlider();
+    })
+})
