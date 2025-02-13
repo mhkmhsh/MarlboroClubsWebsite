@@ -75,60 +75,64 @@
     <!-- INTRO BOX -->
     <!-- Image Gallery-->
     <div class="imggal">
-      <button id="openModal" class="button">Open Modal</button>
-    </div>
+      
+<div id="ex1" class="modal">
 
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Welcome to the modal popup!</p>
-      </div>
+
+</div>
+
+<!-- Link to open the modal -->
+          
+<p><a class="button message-button" role="button" href="#ex1" rel="modal:open" >Images</a>
+</p>
     </div>
     <!-- Sites Gallery -->
     <div class="sitesrotating">
       <div class="row m-3" id="rotcar">
         <!-- ROTATING CAROUSEL-->
-        <div class="container swiper">
-          <div class="slider-wrapper">
-            <div class="card-list swiper-wrapper">
-              <div class="card-item swiper-slide">
-                <img src="images/round1.jpg" alt="User Image" class="user-image">
-                <h2 class="user-profession">Website1</h2>
-                <a class="button message-button" role="button" href="website1.html">Explore</a>
-              </div>
-              <div class="card-item swiper-slide">
-                <img src="images/round2.jpg" alt="User Image" class="user-image">
-                <h2 class="user-profession">Website2</h2>
-                <a class="button message-button" role="button" href="website2.html">Explore</a>
-              </div>
-              <div class="card-item swiper-slide">
-                <img src="images/round3.jpg" alt="User Image" class="user-image">
-                <h2 class="user-profession">Website3</h2>
-                <a class="button message-button" role="button" href="website3.html">Explore</a>
-              </div>
-              <div class="card-item swiper-slide">
-                <img src="images/round4.jpg" alt="User Image" class="user-image">
-                <h2 class="user-profession">Website4</h2>
-                <a class="button message-button" role="button" href="website4.html">Explore</a>
-              </div>
-              <div class="card-item swiper-slide">
-                <img src="images/round5.jpg" alt="User Image" class="user-image">
-                <h2 class="user-profession">Website5</h2>
-                <a class="button message-button" role="button" href="website5.html">Explore</a>
-              </div>
-              <div class="card-item swiper-slide">
-                <img src="images/round6.jpg" alt="User Image" class="user-image">
-                <h2 class="user-profession">Website6</h2>
-                <a class="button message-button" role="button" href="website6.html">Explore</a>
-              </div>
+       <!-- ROTATING CAROUSEL-->
+      <div class="container swiper">
+        <div class="slider-wrapper">
+          <div class="card-list swiper-wrapper">
+            <div class="card-item swiper-slide">
+              <img src="images/round1.jpg" alt="User Image" class="user-image">
+              <h2 class="user-profession">Website1</h2>
+              <a class="button message-button" role="button" href="website1.html">Explore</a>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-slide-button swiper-button-prev"></div>
-            <div class="swiper-slide-button swiper-button-next"></div>
+            <div class="card-item swiper-slide">
+              <img src="images/round2.jpg" alt="User Image" class="user-image">
+              <h2 class="user-profession">Website2</h2>
+              <a class="button message-button" role="button" href="website2.html">Explore</a>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/round3.jpg" alt="User Image" class="user-image">
+              <h2 class="user-profession">Website3</h2>
+              <a class="button message-button" role="button" href="website3.html">Explore</a>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/round4.jpg" alt="User Image" class="user-image">
+              <h2 class="user-profession">Website4</h2>
+              <a class="button message-button" role="button" href="website4.html">Explore</a>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/round5.jpg" alt="User Image" class="user-image">
+              <h2 class="user-profession">Website5</h2>
+              <a class="button message-button" role="button" href="website5.html">Explore</a>
+            </div>
+            <div class="card-item swiper-slide">
+              <img src="images/round6.jpg" alt="User Image" class="user-image">
+              <h2 class="user-profession">Website6</h2>
+              <a class="button message-button" role="button" href="website6.html">Explore</a>
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
 
     <!-- sites gallery option 2 beg-->
 
@@ -152,6 +156,13 @@
     <h3> FORM HERE </h3>
   </div>
   <!-- Footer and Scripts -->
+
+  <!--  jQuery :) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.0.1/swiper-bundle.min.css">

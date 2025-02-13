@@ -97,39 +97,6 @@ $(window).scroll(function () {
 
 });
 
-// MODAL JS 
-document.addEventListener("DOMContentLoaded", function() {
-  const modal = document.getElementById("myModal");
-  const btn = document.getElementById("openModal");
-  const closeBtn = document.querySelector(".close");
-
-  btn.addEventListener("click", function() {
-      modal.style.display = "flex";
-  });
-
-  closeBtn.addEventListener("click", function() {
-      modal.style.display = "none";
-  });
-
-  window.addEventListener("click", function(event) {
-      if (event.target === modal) {
-          modal.style.display = "none";
-      }
-  });
-});
-btn.addEventListener("click", function() {
-  modal.classList.add('show');
-});
-
-closeBtn.addEventListener("click", function() {
-  modal.classList.remove('show');
-});
-
-window.addEventListener("click", function(event) {
-  if (event.target === modal) {
-    modal.classList.remove('show');
-  }
-});
 
 
 
