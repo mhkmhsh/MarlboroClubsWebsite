@@ -97,66 +97,42 @@ $(window).scroll(function () {
 
 });
 
+// MODAL JS 
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("myModal");
+  const btn = document.getElementById("openModal");
+  const closeBtn = document.querySelector(".close");
 
-//hero section
-let items = document.querySelectorAll('.slider .list .item');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-let thumbnails = document.querySelectorAll('.thumbnail .item');
+  btn.addEventListener("click", function() {
+      modal.style.display = "flex";
+  });
 
-// config param
-let countItem = items.length;
-let itemActive = 0;
-// event next click
-next.onclick = function(){
-    itemActive = itemActive + 1;
-    if(itemActive >= countItem){
-        itemActive = 0;
-    }
-    showSlider();
-}
-//event prev click
-prev.onclick = function(){
-    itemActive = itemActive - 1;
-    if(itemActive < 0){
-        itemActive = countItem - 1;
-    }
-    showSlider();
-}
-// auto run slider
-let refreshInterval = setInterval(() => {
-    next.click();
-}, 5000)
-function showSlider(){
-    // remove item active old
-    let itemActiveOld = document.querySelector('.slider .list .item.active');
-    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
-    itemActiveOld.classList.remove('active');
-    thumbnailActiveOld.classList.remove('active');
+  closeBtn.addEventListener("click", function() {
+      modal.style.display = "none";
+  });
 
-    // active new item
-    items[itemActive].classList.add('active');
-    thumbnails[itemActive].classList.add('active');
-    setPositionThumbnail();
+  window.addEventListener("click", function(event) {
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  });
+});
+btn.addEventListener("click", function() {
+  modal.classList.add('show');
+});
 
-    // clear auto time run slider
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(() => {
-        next.click();
-    }, 5000)
-}
-function setPositionThumbnail () {
-    let thumbnailActive = document.querySelector('.thumbnail .item.active');
-    let rect = thumbnailActive.getBoundingClientRect();
-    if (rect.left < 0 || rect.right > window.innerWidth) {
-        thumbnailActive.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
-    }
-}
+closeBtn.addEventListener("click", function() {
+  modal.classList.remove('show');
+});
 
-// click thumbnail
-thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener('click', () => {
-        itemActive = index;
-        showSlider();
-    })
-})
+window.addEventListener("click", function(event) {
+  if (event.target === modal) {
+    modal.classList.remove('show');
+  }
+});
+
+
+
+//sites gallery 2 js beginning
+
+// sites gallery 2 js ending
