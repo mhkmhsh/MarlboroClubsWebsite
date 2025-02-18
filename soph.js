@@ -77,3 +77,44 @@ $(document).ready(function () {
 
   let autoPlay = setInterval(nextSlide, 5000);
 });
+
+
+
+et currentStep = 1;
+
+function nextStep() {
+    // Validate step 1
+    if (document.getElementById("first-name").value === "" || 
+        document.getElementById("last-name").value === "" || 
+        document.getElementById("email").value === "") {
+        alert("Please fill out all fields!");
+        return;
+    }
+
+    // Move to step 2
+    currentStep++;
+    updateFormAndTimeline();
+}
+
+function submitForm() {
+    // Validate step 2
+    if (document.getElementById("topics").value === "" || 
+        document.getElementById("available-times").value === "") {
+        alert("Please fill out all fields!");
+        return;
+    }
+
+    // Submit form (for now just alert)
+    alert("Form Submitted Successfully!");
+}
+
+function updateFormAndTimeline() {
+    // Update active step in the form
+    const steps = document.querySelectorAll('.form-step');
+    steps.forEach(step => step.classList.remove('active'));
+    document.querySelector(`.step${currentStep}-form`).classList.add('active');
+
+    // Update the timeline
+    const timelineSteps = document.querySelectorAll('.step');
+    timelineSteps[currentStep - 1].classList.add('active');
+}

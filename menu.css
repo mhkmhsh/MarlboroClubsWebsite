@@ -1,7 +1,7 @@
 /* Body styling */
 body {
     background-color: #0C0726;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Abril Fatface", serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -33,6 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     height:100%;
+    
   }
   
   .carousel {
@@ -40,6 +41,8 @@ body {
     width: 600px;
     overflow:hidden;
     position: relative;
+    
+    
   }
   .carousel-img {
     position:absolute;
@@ -113,11 +116,12 @@ body {
     background-color: rgba(153, 99, 60, 0.719);
     color: #FFFBE9;
     font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Sites Gallery */
 .sitesrotating {
-    background: #0c0726b2;
+    background: #0c0726e0;
     color: #FFFBE9;
     padding: 50px 20px;
     text-align: center;
@@ -132,6 +136,7 @@ body {
 .navbar-mainbg {
     background-color: #6F4E37;
     padding: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Navbar items */
@@ -315,7 +320,7 @@ body {
     border-radius: 8px;
     backdrop-filter: blur(30px);
     background: #fadca8;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .card-list .card-item .user-image {
@@ -402,6 +407,7 @@ body {
 
 .card__button:hover {
     text-decoration: underline;
+ 
 }
 
 /* Animations for Card Hover Effect */
@@ -409,6 +415,7 @@ body {
     animation: show-data 1s forwards;
     opacity: 1;
     transition: opacity .3s;
+    
 }
 
 .card__article:hover {
@@ -500,7 +507,7 @@ body {
 }
 
   .button {
-    --color: #00A97F;
+    --color:#769EB0;
     padding: 0.8em 1.7em;
     background-color: transparent;
     border-radius: .3em;
@@ -528,6 +535,7 @@ body {
     z-index: -1;
     background-color:#6F4E37;
     transition: 1s ease;
+
    }
    
    .button::before {
@@ -538,6 +546,7 @@ body {
    .button::after {
     left: calc(100% + 1em);
     top: calc(100% + 1em);
+    
    }
    
    .button:hover::before, .button:hover::after {
@@ -547,6 +556,7 @@ body {
    
    .button:hover {
     color: #FFFBE9;
+    
    }
    
    .button:active {
@@ -675,5 +685,115 @@ body {
 
 
 
+footer {
 
+    z-index: 500;
+    width: 100%;
+    height: 50vh;
+  color:#769EB0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 5rem 2vw;
+    position: relative;
+  }
+  
+  footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        #5b3e2e09,
+        #5b3e2e48 10%,
+        #5b3e2ead 20%,
+        #5b3e2ee0 30%,
+        #5b3e2e
+    );
+    z-index: -7;
+  }
+  
+  .backdrop {
+    z-index: -5;
+    position: absolute;
+    inset: 0;
+  
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  
+    mask-image: linear-gradient(
+        #5b3e2e09,
+      #5b3e2e48 10%,
+      #5b3e2ead 20%,
+      #5b3e2ee0 30%,
+      #5b3e2e
+    );
+  
+    -webkit-mask-image: linear-gradient(
+        #5b3e2e09,
+        #5b3e2e48 10%,
+        #5b3e2ead 20%,
+        #5b3e2ee0 30%,
+        #5b3e2e
+    );
+  }
+  
+  .col {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
+    width: 28%;
+  }
+  
+  .col2,
+  .col3 {
+    background-color: #5b3e2e00;
+    border-radius: calc(0.5 * var(--m));
+  }
+  
+  img {
+    height: calc(0.3 * var(--m));
+    object-fit: cover;
+  }
+  
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .link {
+    width: calc(0.8 * var(--m));
+    height: calc(0.8 * var(--m));
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: calc(0.1 * var(--m));
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    :root {
+      --m: 3rem;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    footer {
+      flex-direction: column;
+      padding: 5rem 20vw;
+    }
+    .col {
+      width: 100%;
+    }
+  }
+  
 

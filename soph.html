@@ -71,6 +71,51 @@
     <div class="introbox">
       <h1>SOPHOMORE</h1>
     </div>
+
+    <div class="container">
+      <!-- Timeline -->
+      <div class="timeline">
+          <div class="step step1 active"></div>
+          <div class="step step2"></div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-container">
+          <!-- Step 1 -->
+          <div class="form-step step1-form">
+              <h2>Personal Information</h2>
+              <input type="text" id="first-name" placeholder="First Name" required />
+              <input type="text" id="last-name" placeholder="Last Name" required />
+              <input type="email" id="email" placeholder="Email Address" required />
+              <button type="button" onclick="nextStep()">Next</button>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step step2-form">
+              <h2>Questionnaire</h2>
+              <label for="topics">What topic are you interested in?</label>
+              <select id="topics" required>
+                  <option value="topic1">Topic 1</option>
+                  <option value="topic2">Topic 2</option>
+                  <option value="topic3">Topic 3</option>
+              </select>
+              <label for="available-times">What times are you available for help?</label>
+              <textarea id="available-times" rows="4" placeholder="Enter times..." required></textarea>
+              <button type="button" onclick="submitForm()">Submit</button>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+    
     <!-- INTRO BOX -->
     <!-- INTRO BOX -->
     <!-- Image Gallery-->
@@ -115,8 +160,7 @@
       </main>
   </div>
           
-<p><a class="button message-button" role="button" href="#ex1" rel="modal:open" >Images</a>
-</p>
+
     </div>
     <!-- Sites Gallery -->
     <div class="sitesrotating">
