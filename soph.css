@@ -1182,3 +1182,117 @@ button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+
+
+footer {
+
+    z-index: 500;
+    width: 100%;
+    height: 50vh;
+  color:#769EB0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 5rem 2vw;
+    position: relative;
+  }
+  
+  footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        #5b3e2e09,
+        #5b3e2e48 10%,
+        #5b3e2ead 20%,
+        #5b3e2ee0 30%,
+        #5b3e2e
+    );
+    z-index: -7;
+  }
+  
+  .backdrop {
+    z-index: -5;
+    position: absolute;
+    inset: 0;
+  
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  
+    mask-image: linear-gradient(
+        #5b3e2e09,
+      #5b3e2e48 10%,
+      #5b3e2ead 20%,
+      #5b3e2ee0 30%,
+      #5b3e2e
+    );
+  
+    -webkit-mask-image: linear-gradient(
+        #5b3e2e09,
+        #5b3e2e48 10%,
+        #5b3e2ead 20%,
+        #5b3e2ee0 30%,
+        #5b3e2e
+    );
+  }
+  
+  .col {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
+    width: 28%;
+  }
+  
+  .col2,
+  .col3 {
+    background-color: #5b3e2e00;
+    border-radius: calc(0.5 * var(--m));
+  }
+  
+  img {
+    height: calc(0.3 * var(--m));
+    object-fit: cover;
+  }
+  
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .link {
+    width: calc(0.8 * var(--m));
+    height: calc(0.8 * var(--m));
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: calc(0.1 * var(--m));
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    :root {
+      --m: 3rem;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    footer {
+      flex-direction: column;
+      padding: 5rem 20vw;
+    }
+    .col {
+      width: 100%;
+    }
+  }
+  
