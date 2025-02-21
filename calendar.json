@@ -1,0 +1,49 @@
+{
+    "year": 2025,
+    "days": [
+      {"date": "2025-01-01", "day": "Wednesday", "tag": "New Year's Day", "highlight": "holiday"},
+      {"date": "2025-01-02", "day": "Thursday", "tag": "Normal Day"},
+      {"date": "2025-01-03", "day": "Friday", "tag": "Club Day", "highlight": "yellow"},
+      {"date": "2025-01-04", "day": "Saturday", "tag": "Normal Day"},
+      {"date": "2025-01-05", "day": "Sunday", "tag": "Normal Day"},
+      {"date": "2025-01-06", "day": "Monday", "tag": "Normal Day"},
+      {"date": "2025-01-07", "day": "Tuesday", "tag": "Normal Day"},
+      {"date": "2025-01-08", "day": "Wednesday", "tag": "Normal Day"},
+      {"date": "2025-01-09", "day": "Thursday", "tag": "Normal Day"},
+      {"date": "2025-01-10", "day": "Friday", "tag": "Club Day", "highlight": "yellow"},
+      
+      {"date": "2025-02-14", "day": "Friday", "tag": "Valentine's Day, Club Day", "highlight": "yellow"},
+      {"date": "2025-02-17", "day": "Monday", "tag": "Presidents' Day", "highlight": "holiday"},
+      
+      {"date": "2025-03-17", "day": "Monday", "tag": "St. Patrick's Day", "highlight": "holiday"},
+      
+      {"date": "2025-04-18", "day": "Friday", "tag": "Club Day", "highlight": "yellow"},
+      {"date": "2025-04-20", "day": "Sunday", "tag": "Easter Sunday", "highlight": "holiday"},
+      
+      {"date": "2025-05-15", "day": "Thursday", "tag": "Spring Portfolio Day", "highlight": "special"},
+      {"date": "2025-05-26", "day": "Monday", "tag": "Memorial Day", "highlight": "holiday"},
+      
+      {"date": "2025-06-06", "day": "Friday", "tag": "Last Day of School, Club Day", "highlight": "yellow"},
+      
+      {"date": "2025-07-04", "day": "Friday", "tag": "Independence Day", "highlight": "holiday"},
+      
+      {"date": "2025-09-02", "day": "Monday", "tag": "Labor Day", "highlight": "holiday"},
+      
+      {"date": "2025-10-31", "day": "Friday", "tag": "Halloween, Club Day", "highlight": "yellow"},
+      
+      {"date": "2025-11-11", "day": "Tuesday", "tag": "Veterans Day", "highlight": "holiday"},
+      {"date": "2025-11-28", "day": "Thursday", "tag": "Thanksgiving", "highlight": "holiday"},
+      
+      {"date": "2025-12-24", "day": "Wednesday", "tag": "Christmas Eve", "highlight": "holiday"},
+      {"date": "2025-12-25", "day": "Thursday", "tag": "Christmas Day", "highlight": "holiday"},
+      {"date": "2025-12-31", "day": "Wednesday", "tag": "New Year's Eve", "highlight": "holiday"}
+    ],
+    "specialDays": {
+      "fallPortfolioDay": "TBD",
+      "springPortfolioDay": "TBD",
+      "seniorNight": "TBD",
+      "fieldTrip": "TBD",
+      "recruitmentDay": "TBD"
+    }
+  }
+  
