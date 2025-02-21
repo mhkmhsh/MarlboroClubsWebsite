@@ -79,91 +79,86 @@ $(document).ready(function () {
 });
 //multi_step_form//
 
+$(document).ready(function() {
+    var current_fs, next_fs, previous_fs; // Fieldsets
+    var animating; // Flag to prevent multiple clicks
 
-$(document).ready(function(){
-    var current_fs, next_fs, previous_fs; // fieldsets
-    var left, opacity, scale; // fieldset properties which we will animate
-    var animating; // flag to prevent quick multi-click glitches
-
-    // Show next fieldset
-    $(".next").click(function(){
-        if(animating) return false;
+    // Show next fieldset when "Next" button is clicked
+    $(".next").click(function() {
+        if (animating) return false;
         animating = true;
-        
-        current_fs = $(this).parent();
-        next_fs = $(this).parent().next();
-        
-        // Activate the next step on progress bar
-        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-        
-        // Show next fieldset
-        next_fs.show(); 
-        
-        // Hide the current fieldset with style
-        current_fs.animate({opacity: 0}, {
-            step: function(now, mx) {
-                // As the opacity of current_fs reduces to 0 - stored in "now"
-                // 1. Scale current_fs down to 80%
-                scale = 1 - (1 - now) * 0.2;
-                // 2. Bring next_fs from the right(50%)
-                left = (now * 50) + "%";
-                // 3. Increase opacity of next_fs to 1 as it moves in
-                opacity = 1 - now;
-                current_fs.css({'transform': 'scale('+scale+')', 'position': 'absolute'});
-                next_fs.css({'left': left, 'opacity': opacity});
-            },
-            duration: 800,
-            complete: function(){
-                current_fs.hide();
-                animating = false;
-            },
-            easing: 'easeInOutBack'
-        });
+
+        current_fs = $(this).parent(); // Current fieldset
+        next_fs = $(this).parent().next(); // Next fieldset
+
+        if (next_fs.length) {
+            // Activate next step on progress bar
+            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+            // Show next fieldset
+            next_fs.show();
+
+            // Animate the transition between fieldsets
+            current_fs.animate({ opacity: 0 }, {
+                step: function(now, mx) {
+                    var scale = 1 - (1 - now) * 0.2; // Scale down the current fieldset
+                    var left = (now * 50) + "%"; // Move the next fieldset in from the right
+                    var opacity = 1 - now; // Fade out the current fieldset
+                    current_fs.css({'transform': 'scale(' + scale + ')', 'position': 'absolute'});
+                    next_fs.css({'left': left, 'opacity': opacity});
+                },
+                duration: 800,
+                complete: function() {
+                    current_fs.hide(); // Hide current fieldset
+                    animating = false; // Allow further clicks
+                    next_fs.css({'position': 'relative', 'left': '0', 'opacity': '1'}); // Reset position and opacity
+                },
+                easing: 'easeInOutBack' // Smooth transition
+            });
+        }
     });
 
-    // Show previous fieldset
-    $(".previous").click(function(){
-        if(animating) return false;
+    // Show previous fieldset when "Previous" button is clicked
+    $(".previous").click(function() {
+        if (animating) return false;
         animating = true;
-        
-        current_fs = $(this).parent();
-        previous_fs = $(this).parent().prev();
-        
-        // Deactivate the current step on progress bar
-        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-        
-        // Show previous fieldset
-        previous_fs.show();
-        
-        // Hide the current fieldset with style
-        current_fs.animate({opacity: 0}, {
-            step: function(now, mx) {
-                // As the opacity of current_fs reduces to 0 - stored in "now"
-                // 1. Scale previous_fs from 80% to 100%
-                scale = 0.8 + (1 - now) * 0.2;
-                // 2. Take current_fs to the right(50%) - from 0%
-                left = ((1 - now) * 50) + "%";
-                // 3. Increase opacity of previous_fs to 1 as it moves in
-                opacity = 1 - now;
-                current_fs.css({'left': left});
-                previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-            },
-            duration: 800,
-            complete: function(){
-                current_fs.hide();
-                animating = false;
-            },
-            easing: 'easeInOutBack'
-        });
+
+        current_fs = $(this).parent(); // Current fieldset
+        previous_fs = $(this).parent().prev(); // Previous fieldset
+
+        if (previous_fs.length) {
+            // Deactivate current step on progress bar
+            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+            // Show previous fieldset
+            previous_fs.show();
+
+            // Animate the transition between fieldsets
+            current_fs.animate({ opacity: 0 }, {
+                step: function(now, mx) {
+                    var scale = 0.8 + (1 - now) * 0.2; // Scale previous fieldset up
+                    var left = ((1 - now) * 50) + "%"; // Move current fieldset out to the right
+                    var opacity = 1 - now; // Fade current fieldset
+                    current_fs.css({'left': left});
+                    previous_fs.css({'transform': 'scale(' + scale + ')', 'opacity': opacity});
+                },
+                duration: 800,
+                complete: function() {
+                    current_fs.hide(); // Hide current fieldset
+                    animating = false; // Allow further clicks
+                    previous_fs.css({'position': 'relative', 'left': '0', 'opacity': '1'}); // Reset position and opacity
+                },
+                easing: 'easeInOutBack' // Smooth transition
+            });
+        }
     });
 
-    // Submit button functionality (for demo purposes)
-    $(".submit").click(function(){
+    // Prevent form submission for now and show alert (for demo purposes)
+    $(".submit").click(function() {
         alert("Form Submitted!");
-        return false; // Prevent form submission for now
+        return false; // Prevent form from actually submitting for now
     });
 });
-
 
 //Multi_step_form//
 

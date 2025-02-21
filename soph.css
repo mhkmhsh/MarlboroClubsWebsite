@@ -619,14 +619,15 @@ i {
 
 
 /*Multi_Step_Form*/
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
-/* Basic reset */
 
 /* form styles */
 #msform {
     text-align: center;
-    margin-top: 50px; /* Adjust this to move the form up the screen */
+    margin-top: 50px;
+    position: relative; /* Add this to contain the absolute positioned fieldsets */
 }
 
 #msform fieldset {
@@ -634,10 +635,21 @@ i {
     border: 0 none;
     border-radius: 8px;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-    padding: 30px 50px; /* Increased padding to make the form bigger */
+    padding: 30px 50px;
     box-sizing: border-box;
-    width: 80%; /* Increased width to make the form larger */
-    margin: 0 auto; /* Centers the form on the page */
+    width: 80%;
+    margin: 0 auto;
+    position: absolute; /* Add this to stack fieldsets */
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Show the first fieldset */
+#msform fieldset:first-of-type {
+    opacity: 1;
+    position: relative; /* First fieldset should be visible */
 }
 
 /* Hide all except first fieldset */
@@ -667,7 +679,7 @@ i {
 
 /* buttons */
 #msform .action-button {
-    width: 120px; /* Slightly increased button size */
+    width: 120px;
     background: #2098ce;
     font-weight: bold;
     color: white;
@@ -675,7 +687,7 @@ i {
     border-radius: 25px;
     cursor: pointer;
     padding: 12px 5px;
-    margin: 15px 5px; /* Adjusted margins for better spacing */
+    margin: 15px 5px;
 }
 
 #msform .action-button:hover {
@@ -700,7 +712,7 @@ i {
 
 /* headings */
 .fs-title {
-    font-size: 20px; /* Larger title */
+    font-size: 20px;
     text-transform: uppercase;
     color: #2C3E50;
     margin-bottom: 15px;
@@ -736,11 +748,11 @@ i {
 #progressbar li:before {
     content: counter(step);
     counter-increment: step;
-    width: 30px; /* Slightly larger circles */
+    width: 30px;
     height: 30px;
     line-height: 32px;
     display: block;
-    font-size: 14px; /* Larger font for better visibility */
+    font-size: 14px;
     color: #333;
     background: white;
     border-radius: 25px;
@@ -766,6 +778,9 @@ i {
     background: #2098ce;
     color: white;
 }
+
+
+
 
 
 /*Multi_Step_Form*/

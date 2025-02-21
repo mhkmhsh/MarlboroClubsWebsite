@@ -164,86 +164,67 @@ thumbnails.forEach((thumbnail, index) => {
 
 
 
-//CALENDAR JSON STUFFdocument.addEventListener("DOMContentLoaded", function () {
+//CALENDAR JSON STUFF
   document.addEventListener("DOMContentLoaded", function () {
-    async function loadCalendar() {
-        try {
-            const response = await fetch("calendar.json");
-            const data = await response.json(); // Contains { year: 2025, days: [...] }
+    var calendar = document.getElementById("calendar-table");
+    var gridTable = document.getElementById("table-body");
+    var currentDate = new Date();
+    var selectedDate = currentDate;
+    var selectedDayBlock = null;
   
-            const calendar = document.getElementById("calendar");
-            const header = document.getElementById("calendar-header");
-            const date = new Date();
-            const currentMonth = date.getMonth();
-            const currentYear = date.getFullYear();
-            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-  
-            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  
-            header.textContent = `${monthNames[currentMonth]} ${currentYear}`;
-            calendar.innerHTML = "";
-  
-            // Create day headers (Sun - Sat)
-            dayNames.forEach(day => {
-                const dayHeader = document.createElement("div");
-                dayHeader.classList.add("day-header");
-                dayHeader.textContent = day;
-                calendar.appendChild(dayHeader);
-            });
-  
-            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
-            for (let i = 0; i < firstDay; i++) {
-                const emptyDiv = document.createElement("div");
-                emptyDiv.classList.add("day", "empty");
-                calendar.appendChild(emptyDiv);
+    var eventData = {
+        "year": 2025,
+        "days": [
+            {"date": "2025-01-01", "day": "Wednesday", "tag": "New Year's Day", "highlight": "holiday"},
+            {"date": "2025-02-14", "day": "Friday", "tag": "Valentine's Day, Club Day", "highlight": "yellow"},
+            {"date": "2025-02-17", "day": "Monday", "tag": "Presidents' Day", "highlight": "holiday"},
+            {"date": "2025-07-04", "day": "Friday", "tag": "Independence Day", "highlight": "holiday"}
+        ]
+    };
+
+    function findEvent(dateStr) {
+        return eventData.days.find(event => event.date === dateStr);
+    }
+
+    function createCalendar(date) {
+        var startDate = new Date(date.getFullYear(), date.getMonth(), 1);
+        var monthTitle = document.getElementById("month-name");
+        monthTitle.innerHTML = date.toLocaleString("en-US", { month: "long", year: "numeric" });
+
+        gridTable.innerHTML = "";
+
+        var newRow = document.createElement("div");
+        newRow.className = "row";
+        var currentRow = gridTable.appendChild(newRow);
+
+        for (let i = 1; i < (startDate.getDay() || 7); i++) {
+            let emptyDivCol = document.createElement("div");
+            emptyDivCol.className = "col empty-day";
+            currentRow.appendChild(emptyDivCol);
+        }
+
+        var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+
+        for (let i = 1; i <= lastDay; i++) {
+            if (currentRow.children.length >= 7) {
+                currentRow = gridTable.appendChild(document.createElement("div"));
+                currentRow.className = "row";
             }
-  
-            // Loop through days in the month
-            for (let i = 1; i <= daysInMonth; i++) {
-                const dayDiv = document.createElement("div");
-                dayDiv.classList.add("day");
-                dayDiv.textContent = i;
-  
-                // Find events for the current day
-                const matchingEvents = data.days.filter(event => {
-                    const eventDate = new Date(event.date);
-                    return eventDate.getDate() === i && eventDate.getMonth() === currentMonth && eventDate.getFullYear() === currentYear;
-                });
-  
-                // Apply styles based on event type
-                matchingEvents.forEach(event => {
-                    const eventDiv = document.createElement("div");
-                    eventDiv.classList.add("event");
-                    eventDiv.textContent = event.tag;
-                    
-                    // Apply color based on highlight type
-                    if (event.highlight === "yellow") {
-                        eventDiv.style.backgroundColor = "#ffeb3b"; // Club Days
-                        eventDiv.style.color = "#000";
-                    } else if (event.highlight === "holiday") {
-                        eventDiv.style.backgroundColor = "#ff7043"; // Holidays
-                        eventDiv.style.color = "#fff";
-                        eventDiv.style.fontWeight = "bold";
-                    } else if (event.highlight === "special") {
-                        eventDiv.style.backgroundColor = "#4caf50"; // Special Days
-                        eventDiv.style.color = "#fff";
-                        eventDiv.style.fontWeight = "bold";
-                    } else {
-                        eventDiv.style.backgroundColor = "#ccc"; // Default style
-                    }
-  
-                    eventDiv.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.3)";
-                    dayDiv.appendChild(eventDiv);
-                });
-  
-                calendar.appendChild(dayDiv);
+
+            let currentDay = document.createElement("div");
+            currentDay.className = "col";
+            let fullDateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+
+            let event = findEvent(fullDateStr);
+            if (event) {
+                currentDay.classList.add(event.highlight || "event-day");
+                currentDay.title = event.tag;
             }
-        } catch (error) {
-            console.error("Error loading calendar data:", error);
+
+            currentDay.innerHTML = i;
+            currentRow.appendChild(currentDay);
         }
     }
-  
-    loadCalendar();
-  });
-  
+
+    createCalendar(currentDate);
+});
